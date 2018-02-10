@@ -17,7 +17,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -31,6 +30,24 @@
 			<version>2.6.1</version>
 			<scope>compile</scope>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>digital-era</groupId>
+			<artifactId>digital-era-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>digital-era</groupId>
+			<artifactId>digital-era-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>digital-era</groupId>
+			<artifactId>digital-era-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<finalName>digital-era-web</finalName>
