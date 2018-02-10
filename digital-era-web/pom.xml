@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>digital-era-web</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>digital-era-web</name>
 	<url>http://maven.apache.org</url>
 
@@ -10,6 +10,7 @@
 		<groupId>digital-era</groupId>
 		<artifactId>digital-era-parent-pom</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../digital-era-parent-pom</relativePath>
 	</parent>
 
 	<dependencies>
@@ -52,19 +53,18 @@
 	<build>
 		<finalName>digital-era-web</finalName>
 		<plugins>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>com.de.Application</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-				</configuration>
-			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.10.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
 	</build>
 </project>
