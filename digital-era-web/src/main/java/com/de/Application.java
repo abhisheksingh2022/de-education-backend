@@ -9,7 +9,7 @@ public class Application {
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Application.class, args);
 
-		String url = "http://localhost:4200/";
+		String url = "http://localhost:8080/";
 
 		String os = System.getProperty("os.name").toLowerCase();
 		if (os.indexOf("win") >= 0) {
